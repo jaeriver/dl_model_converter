@@ -5,7 +5,7 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--model',default='resnet50' , type=str)
-parser.add_argument('--model_type',default='image-classification' , type=str)
+parser.add_argument('--model_type',default='image_classification' , type=str)
 parser.add_argument('--batchsize',default=1 , type=int)
 
 args = parser.parse_args()
