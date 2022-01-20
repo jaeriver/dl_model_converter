@@ -7,13 +7,13 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--model',default='resnet50' , type=str)
-parser.add_argument('--model_type',default='classification' , type=str)
+parser.add_argument('--model_type',default='image_classification' , type=str)
 
 args = parser.parse_args()
 model_name = args.model
 model_type = args.model_type
 
-saved_model_dir = f"../tensorflow/{model_type}/{model_name}_saved_model"
+saved_model_dir = f"../tf/{model_type}/{model_name}_saved_model"
 
 # Convert the model
 converter = tf.lite.TFLiteConverter.from_saved_model(saved_model_dir) # path to the SavedModel directory
