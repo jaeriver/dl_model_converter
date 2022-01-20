@@ -9,7 +9,7 @@ pip install -U tf2onnx
 
 python -m tf2onnx.convert \
         --saved-model ./$MODEL_TYPE/${MODEL_NAME}_saved_model \
-        --output ../onnx/${MODEL_NAME}_tf.onnx \
+        --output ../onnx/$MODEL_TYPE/${MODEL_NAME}_tf.onnx \
         --opset 9
 
 
