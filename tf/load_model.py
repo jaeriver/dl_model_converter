@@ -23,7 +23,7 @@ parser.add_argument('--model',default='resnet50' , type=str)
 args = parser.parse_args()
 model_name = args.model
 
-saved_model_dir = f'./classification/{model_name}_saved_model'
+saved_model_dir = f'./image_classification/{model_name}_saved_model'
 
 def load_save_model(model_name,saved_model_dir):
     model = models_detail[model_name]
