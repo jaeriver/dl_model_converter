@@ -1,5 +1,4 @@
 import torchvision.models as models
-import torch.onnx
 
 import argparse
 
