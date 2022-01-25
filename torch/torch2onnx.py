@@ -17,14 +17,14 @@ batch_size = args.batchsize
 model = torch.load(f'./{model_type}/{model_name}.pth')
 
 import os
-folder_path = f"../onnx/{model_type}"
+folder_path = f"../convert_onnx/{model_type}"
 try:
     os.mkdir(folder_path)
 except:
     pass
   
 # ------------------------ export -----------------------------
-output_onnx = f'../onnx/{model_type}/{model_name}_{batch_size}_torch.onnx'
+output_onnx = f'../convert_onnx/{model_type}/{model_name}_{batch_size}_torch.onnx'
 print("==> Exporting model to ONNX format at '{}'".format(output_onnx))
 input_names = ["input0"]
 output_names = ["output0"]
