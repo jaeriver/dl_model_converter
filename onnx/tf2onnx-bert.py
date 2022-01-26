@@ -26,7 +26,7 @@ def get_model(model_name, bucket_name):
             continue;
         bucket.download_file(object.key, object.key)
     
-    return model_name
+    return 'tf/' + model_name
  
 model_path = get_model(model_name, bucket_name)
 
