@@ -20,6 +20,7 @@ def get_model(model_name, bucket_name):
     
     prefix = 'tf/' + model_name
     for object in bucket.objects.filter(Prefix = prefix):
+        print(prefix)
         if object.key == prefix:
             os.makedirs(os.path.dirname(object.key), exist_ok=True)
             continue;
