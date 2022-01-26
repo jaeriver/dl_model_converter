@@ -4,7 +4,7 @@ import onnxruntime as rt
 import tensorflow as tf
 import tf2onnx
 import boto3
-from transformers import BertTokenizer, TFBertForQuestionAnswering
+from transformers import BertTokenizer, TFBertModel
 import argparse
 
 parser = argparse.ArgumentParser()
