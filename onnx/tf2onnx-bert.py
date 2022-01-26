@@ -31,8 +31,8 @@ def get_model(model_name, bucket_name):
 model_path = get_model(model_name, bucket_name)
 
 
-tokenizer = BertTokenizer.from_pretrained(model_path)
-model = TFBertForQuestionAnswering.from_pretrained(model_path)
+tokenizer = BertTokenizer.from_pretrained(model_path, cache_dir=None, local_files_only=True)
+model = TFBertModel.from_pretrained(model_path, cache_dir=None, local_files_only=True)
 
 input_spec = (
     tf.TensorSpec((None,  None), tf.int32, name="input_ids"),
