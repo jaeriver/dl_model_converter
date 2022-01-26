@@ -4,6 +4,12 @@ import onnxruntime as rt
 import tf2onnx
 from transformers import BertTokenizer, TFBertModel
 import time
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--batch_size',default=1 , type=int)
+args = parser.parse_args()
+batch_size = args.batch_size
 
 tf_model_path = 'tf/bert'    
 
