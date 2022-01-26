@@ -25,9 +25,10 @@ encoded_input = tokenizer(test_batch,
                           truncation=True,
                           max_length=512)
 input_dict_np = {k: v.numpy() for k, v in encoded_input.items()}
-output_names = list(tf_results.keys())
 
 tf_results = model(encoded_input)
+output_names = list(tf_results.keys())
+
 
 model_name = "bert.onnx"
 opt = rt.SessionOptions()
