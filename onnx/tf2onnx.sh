@@ -7,7 +7,7 @@ MODEL_TYPE=$2
 
 python -m tf2onnx.convert \
         --saved-model ./$MODEL_TYPE/${MODEL_NAME}_saved_model \
-        --output ../convert_onnx/$MODEL_TYPE/${MODEL_NAME}_tf.onnx \
+        --output ./$MODEL_TYPE/${MODEL_NAME}_tf.onnx \
         --opset 9
 
 
