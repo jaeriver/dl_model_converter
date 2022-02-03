@@ -1,5 +1,5 @@
 import torchvision.models as models
-import torch.onnx
+import torch
 
 import argparse
 
